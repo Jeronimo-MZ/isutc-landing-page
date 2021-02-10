@@ -2,205 +2,173 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 :root {
   font-size: 62.5%;
-  font-family: 'Montserrat', sans-serif;
-}
+  font-family: 'Montserrat', sans-serif; }
 
 body {
-  background-color: gray;
-}
+  background-color: gray; }
 
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 ul, li {
   list-style-type: none;
-  list-style: none;
-}
+  list-style: none; }
 
 header {
   width: 100%;
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: .9rem 2rem;
-}
-
-header .isutc-logo {
-  width: 200px;
-}
-
-header .isutc-logo img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-header .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  gap: 4rem;
-  padding-right: 10rem;
-}
-
-header .right .inscricoes-online {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #364c90;
-  text-transform: uppercase;
-}
-
-header .right .fenix-logo {
-  width: 50px;
-  margin-right: 4rem;
-}
-
-header .right i {
-  font-size: 2.7rem;
-}
+  align-items: center;
+  justify-content: space-between;
+  padding: .9rem 2rem; }
+  header .isutc-logo {
+    width: 200px; }
+    header .isutc-logo img {
+      width: 100%;
+      object-fit: cover; }
+  header .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4rem;
+    padding-right: 10rem; }
+    header .right .inscricoes-online {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #364c90;
+      text-transform: uppercase; }
+    header .right .fenix-logo {
+      width: 50px;
+      margin-right: 4rem; }
+    header .right i {
+      font-size: 2.7rem; }
 
 .nav-bar {
   background-color: #3e3e3f;
   width: 100%;
   color: white;
   padding: 0 1.5rem;
-  position: relative;
-}
+  position: relative; }
+  .nav-bar nav > ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 10rem;
+    width: fit-content;
+    gap: 6rem; }
+    .nav-bar nav > ul > li {
+      height: 100%;
+      padding: 1.5rem 0; }
+    .nav-bar nav > ul > li > a {
+      font-size: 1.6rem;
+      font-weight: 200;
+      color: white;
+      position: relative;
+      display: inline-block;
+      text-transform: uppercase; }
+  .nav-bar li:hover .dropdown {
+    top: 4.9rem;
+    opacity: 1;
+    visibility: visible; }
+  .nav-bar .dropdown {
+    position: absolute;
+    background-color: white;
+    top: 8rem;
+    width: 100%;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: black;
+    padding: 3rem 12rem 6rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .6s, visibility .6s, top .4s; }
+    .nav-bar .dropdown h2,
+    .nav-bar .dropdown h2 a {
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: black; }
+  .nav-bar .dropdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 2rem; }
+  .nav-bar .dropdown.instituicao .column1 div,
+  .nav-bar .dropdown.ensino .column1 div,
+  .nav-bar .dropdown.investigacao .column2 div,
+  .nav-bar .dropdown.investigacao .column3 div,
+  .nav-bar .dropdown.estudantes .column2 div,
+  .nav-bar .dropdown.alumni div div {
+    font-size: 1.4rem;
+    max-width: 80%;
+    color: #888888; }
+  .nav-bar .dropdown.instituicao .column1 span,
+  .nav-bar .dropdown.ensino .column1 span,
+  .nav-bar .dropdown.investigacao .column2 span,
+  .nav-bar .dropdown.investigacao .column3 span,
+  .nav-bar .dropdown.estudantes .column2 span,
+  .nav-bar .dropdown.alumni div span {
+    color: #00978b; }
+  .nav-bar .dropdown.instituicao .column2 a,
+  .nav-bar .dropdown.ensino .column2 a,
+  .nav-bar .dropdown.estudantes .column3 a {
+    color: #888888;
+    transition: .2s;
+    font-size: 1.4rem; }
+    .nav-bar .dropdown.instituicao .column2 a:hover,
+    .nav-bar .dropdown.ensino .column2 a:hover,
+    .nav-bar .dropdown.estudantes .column3 a:hover {
+      color: #0056b3; }
+  .nav-bar .dropdown.instituicao .column3 img,
+  .nav-bar .dropdown.ensino .column3 img,
+  .nav-bar .dropdown.investigacao .column1 img,
+  .nav-bar .dropdown.estudantes .column1 img {
+    width: 50%; }
 
-.nav-bar nav > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
-  margin-right: 10rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  gap: 6rem;
-}
-
-.nav-bar nav > ul > li {
-  height: 100%;
-  padding: 1.5rem 0;
-}
-
-.nav-bar nav > ul > li > a {
-  font-size: 1.6rem;
-  font-weight: 200;
-  color: white;
-  position: relative;
-  display: inline-block;
-  text-transform: uppercase;
-}
-
-.nav-bar li:hover .dropdown {
-  top: 4.9rem;
-  opacity: 1;
-  visibility: visible;
-}
-
-.nav-bar .dropdown {
-  position: absolute;
-  background-color: white;
-  top: 8rem;
-  width: 100%;
-  left: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  color: black;
-  padding: 3rem 12rem 6rem;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity .6s, visibility .6s, top .4s;
-  transition: opacity .6s, visibility .6s, top .4s;
-}
-
-.nav-bar .dropdown h2,
-.nav-bar .dropdown h2 a {
-  font-size: 1.5rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: black;
-}
-
-.nav-bar .dropdown div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  gap: 2rem;
-}
-
-.nav-bar .dropdown.instituicao .column1 div,
-.nav-bar .dropdown.ensino .column1 div,
-.nav-bar .dropdown.investigacao .column2 div,
-.nav-bar .dropdown.investigacao .column3 div,
-.nav-bar .dropdown.estudantes .column2 div,
-.nav-bar .dropdown.alumni div div {
-  font-size: 1.4rem;
-  max-width: 80%;
-  color: #888888;
-}
-
-.nav-bar .dropdown.instituicao .column1 span,
-.nav-bar .dropdown.ensino .column1 span,
-.nav-bar .dropdown.investigacao .column2 span,
-.nav-bar .dropdown.investigacao .column3 span,
-.nav-bar .dropdown.estudantes .column2 span,
-.nav-bar .dropdown.alumni div span {
-  color: #00978b;
-}
-
-.nav-bar .dropdown.instituicao .column2 a,
-.nav-bar .dropdown.ensino .column2 a,
-.nav-bar .dropdown.estudantes .column3 a {
-  color: #888888;
-  -webkit-transition: .2s;
-  transition: .2s;
-  font-size: 1.4rem;
-}
-
-.nav-bar .dropdown.instituicao .column2 a:hover,
-.nav-bar .dropdown.ensino .column2 a:hover,
-.nav-bar .dropdown.estudantes .column3 a:hover {
-  color: #0056b3;
-}
-
-.nav-bar .dropdown.instituicao .column3 img,
-.nav-bar .dropdown.ensino .column3 img,
-.nav-bar .dropdown.investigacao .column1 img,
-.nav-bar .dropdown.estudantes .column1 img {
-  width: 50%;
-}
-/*# sourceMappingURL=main.css.map */
+section#banner {
+  overflow: hidden;
+  position: relative; }
+  section#banner .container {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: margin .2s; }
+    section#banner .container img {
+      height: 80vh;
+      width: 100vw;
+      object-fit: cover; }
+  section#banner .buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    z-index: 9;
+    width: 100%;
+    height: 20rem; }
+    section#banner .buttons button {
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      background-color: #00000044;
+      cursor: pointer; }
+      section#banner .buttons button:focus {
+        outline: none; }
+      section#banner .buttons button i {
+        font-size: 2rem;
+        color: white; }
