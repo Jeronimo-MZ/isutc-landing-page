@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: gray;
+    background-color: #ededed;
 }
 
 a {
@@ -121,7 +121,7 @@ header {
         opacity: 0;
         visibility: hidden;
         transition: opacity .6s, visibility .6s, top .4s;
-        
+        z-index: 10;
         h2,
         h2 a {
             font-size: 1.5rem;
@@ -230,6 +230,38 @@ section#banner {
             i {
                 font-size: 2rem;
                 color: white;
+            }
+        }
+    }
+}
+
+// section#links
+section#links {
+    background-color: white;
+    .container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2rem 8rem;
+        a {
+            padding: .5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            img {
+                width: 8rem;
+            }
+            h2 {
+                color: #888888;
+                transition: .2s;
+                font-weight: normal;
+                text-transform: uppercase;
+                &:hover {
+                    color: #0056b3;
+                }
             }
         }
     }
