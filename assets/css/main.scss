@@ -38,6 +38,16 @@ ul ,li {
     list-style: none;
 }
 
+@keyframes fill-progress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+
+}
+
 
 
 // header =======================
@@ -249,6 +259,29 @@ section#banner {
             }
         }
     }
+
+    .progress-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        // background-color: rgba(61, 61, 61, 0.281);
+    
+    }
+    
+    .progress-bar .progress {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.267);
+    }
+    .run-animation {
+        animation: fill-progress 4.8s 1s infinite;
+    }
+    
 }
 
 // section#links
@@ -289,13 +322,15 @@ section#isutc-ensino {
     padding: 8rem 0;
     .container {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         gap: 3rem;
-        padding: 0 32rem;
+        padding: 0 18%;
         width: 100%;
         .box {
-            min-width: 200px;
+            min-width: 300px;
+            max-width: 550px;
             width: 100%;
             background-color: white;
             padding: 2rem 2rem;
@@ -334,7 +369,7 @@ section#isutc-ensino {
 
 // section#noticia - Noticias e Eventos ==================================
 section#noticias {
-    padding: 8rem 32rem;
+    padding: 8rem 18%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -419,12 +454,13 @@ section#why-isutc {
     padding: 5rem 0rem 25rem;
 
     .container {
-        padding: 2rem 32rem;
+        padding: 2rem 18%;
         .box {
             height: 25rem;
             background-color: #ffffff;
             padding: 2rem;
             display: flex;
+            min-width: 800px;
             align-items: center;
             gap: 3rem;
 
@@ -521,7 +557,7 @@ footer {
     }
 
     .page-info {
-        padding: 3rem 32rem;
+        padding: 3rem 18%;
         width: 100%;
         background-color: #364c90;
         color: white;

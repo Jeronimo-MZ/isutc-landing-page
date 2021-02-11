@@ -19,25 +19,49 @@ async function scroll (direction) {
     }
 }
 
-    const btnPrevious = document.getElementById('btn-previous');
-    const btnNext = document.getElementById('btn-next');
+const btnPrevious = document.getElementById('btn-previous');
+const btnNext = document.getElementById('btn-next');
+// progress bar
+function slideShow() {
+    btnNext.dispatchEvent(new Event('click'));
+}
 
-    btnPrevious.addEventListener('click', () => {
-        if ((scrollWidth+1) > 0) {
-            for (let i = 1; i < numImages; i++) {
-                scroll('right');
-            }
-        } else {
 
+const progress = document.querySelector('.progress-bar .progress.run-animation');
+const resetProgress = async() => {
+    progress.classList.remove('run-animation');
+    await delay(50);
+    progress.classList.add('run-animation');
+    clearInterval(myVar);
+    myVar = setInterval(slideShow, 5800)
+};
+
+
+
+
+
+btnPrevious.addEventListener('click', () => {
+    if ((scrollWidth+1) > 0) {
+        for (let i = 1; i < numImages; i++) {
+            scroll('right');
+        }
+    } else {
+        
+        scroll('left');
+    }
+    resetProgress()
+});
+btnNext.addEventListener('click', () => {
+    if ((-scrollWidth/100) < numImages-1) {
+        scroll('right')
+    } else {
+        for (let i = 1; i < numImages; i++) {
             scroll('left');
         }
-    });
-    btnNext.addEventListener('click', () => {
-        if ((-scrollWidth/100) < numImages-1) {
-            scroll('right')
-        } else {
-            for (let i = 1; i < numImages; i++) {
-                scroll('left');
-            }
-        }
-    });
+    }
+    resetProgress()
+});
+
+
+
+var myVar = setInterval(slideShow(), 5800);

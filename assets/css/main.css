@@ -36,6 +36,24 @@ ul, li {
   list-style: none;
 }
 
+@-webkit-keyframes fill-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fill-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 header {
   width: 100%;
   background-color: #fff;
@@ -301,6 +319,28 @@ section#banner .buttons button i {
   color: white;
 }
 
+section#banner .progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+section#banner .progress-bar .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+}
+
+section#banner .run-animation {
+  -webkit-animation: fill-progress 4.8s 1s infinite;
+          animation: fill-progress 4.8s 1s infinite;
+}
+
 section#links {
   background-color: white;
 }
@@ -361,6 +401,8 @@ section#isutc-ensino .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -368,12 +410,13 @@ section#isutc-ensino .container {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 3rem;
-  padding: 0 32rem;
+  padding: 0 18%;
   width: 100%;
 }
 
 section#isutc-ensino .container .box {
-  min-width: 200px;
+  min-width: 300px;
+  max-width: 550px;
   width: 100%;
   background-color: white;
   padding: 2rem 2rem;
@@ -419,7 +462,7 @@ section#isutc-ensino .container .box img:hover {
 }
 
 section#noticias {
-  padding: 8rem 32rem;
+  padding: 8rem 18%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -531,7 +574,7 @@ section#why-isutc {
 }
 
 section#why-isutc .container {
-  padding: 2rem 32rem;
+  padding: 2rem 18%;
 }
 
 section#why-isutc .container .box {
@@ -541,6 +584,7 @@ section#why-isutc .container .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-width: 800px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -647,7 +691,7 @@ footer .text a {
 }
 
 footer .page-info {
-  padding: 3rem 32rem;
+  padding: 3rem 18%;
   width: 100%;
   background-color: #364c90;
   color: white;
