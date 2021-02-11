@@ -33,7 +33,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .9rem 2rem;
+    padding: 1rem 2rem;
 
     .isutc-logo{
         width: 200px;
@@ -102,7 +102,8 @@ header {
             text-transform: uppercase;
         }
     }
-    li:hover .dropdown {
+    li:hover .dropdown,
+    li:focus-within .dropdown {
         top: 4.9rem;
         opacity: 1;
         visibility: visible;
@@ -354,7 +355,12 @@ section#noticias {
 
             a h2, a p {
                 color: #212529;
-                font-size: 2rem;
+                font-size: 1.8rem;
+                transition: .2s;
+                font-weight: 500;
+                &:hover {
+                    color: #0056b3
+                }
             }
             & > p {
                 margin-top: 1rem;
@@ -379,6 +385,9 @@ section#noticias {
             overflow-y: scroll;
             .noticia {
                 height: fit-content;
+                p {
+                    font-weight: 400;
+                }
             }
         }
 

@@ -36,7 +36,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: .9rem 2rem;
+  padding: 1rem 2rem;
 }
 
 header .isutc-logo {
@@ -116,7 +116,8 @@ header .right i {
   text-transform: uppercase;
 }
 
-.nav-bar li:hover .dropdown {
+.nav-bar li:hover .dropdown,
+.nav-bar li:focus-within .dropdown {
   top: 4.9rem;
   opacity: 1;
   visibility: visible;
@@ -465,7 +466,14 @@ section#noticias .container .noticia {
 
 section#noticias .container .noticia a h2, section#noticias .container .noticia a p {
   color: #212529;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-weight: 500;
+}
+
+section#noticias .container .noticia a h2:hover, section#noticias .container .noticia a p:hover {
+  color: #0056b3;
 }
 
 section#noticias .container .noticia > p {
@@ -496,5 +504,9 @@ section#noticias .container .right .noticia {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+section#noticias .container .right .noticia p {
+  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */
