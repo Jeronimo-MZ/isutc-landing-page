@@ -266,3 +266,53 @@ section#links {
         }
     }
 }
+
+// section#isutc-ensino
+
+section#isutc-ensino {
+    padding: 8rem 0;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 0 32rem;
+        width: 100%;
+        .box {
+            min-width: 200px;
+            width: 100%;
+            background-color: white;
+            padding: 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            border: 1px solid rgba(128, 128, 128, 0.178);
+            border-radius: 4px;
+
+
+
+            h2 {
+                margin-top: 2rem;
+                font-size: 3.2rem;
+                color: #364c90;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 1.3rem;
+                color: #888;
+                line-height: 2rem;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                transition: 1s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+

@@ -338,4 +338,69 @@ section#links .container a h2 {
 section#links .container a h2:hover {
   color: #0056b3;
 }
+
+section#isutc-ensino {
+  padding: 8rem 0;
+}
+
+section#isutc-ensino .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  padding: 0 32rem;
+  width: 100%;
+}
+
+section#isutc-ensino .container .box {
+  min-width: 200px;
+  width: 100%;
+  background-color: white;
+  padding: 2rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  border: 1px solid rgba(128, 128, 128, 0.178);
+  border-radius: 4px;
+}
+
+section#isutc-ensino .container .box h2 {
+  margin-top: 2rem;
+  font-size: 3.2rem;
+  color: #364c90;
+  text-transform: uppercase;
+}
+
+section#isutc-ensino .container .box p {
+  font-size: 1.3rem;
+  color: #888;
+  line-height: 2rem;
+}
+
+section#isutc-ensino .container .box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section#isutc-ensino .container .box img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 /*# sourceMappingURL=main.css.map */
