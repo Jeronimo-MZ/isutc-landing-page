@@ -316,3 +316,72 @@ section#isutc-ensino {
     }
 }
 
+// section#noticia - Noticias e Eventos ==================================
+section#noticias {
+    padding: 8rem 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+
+    h1 {
+        color: #364c90;
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    img {
+        transition: 1s;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+
+        .noticia {
+            width: 100%;
+            padding: 4rem 2rem;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+
+            a h2, a p {
+                color: #212529;
+                font-size: 2rem;
+            }
+            & > p {
+                margin-top: 1rem;
+                font-size: 1.45rem;
+                color:  #888;
+                line-height: 2.5rem;
+
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .right {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 1rem 2rem 1rem;
+            gap: 1rem 2rem;
+            height: 620px;
+            overflow-y: scroll;
+            .noticia {
+                height: fit-content;
+            }
+        }
+
+
+    }
+}

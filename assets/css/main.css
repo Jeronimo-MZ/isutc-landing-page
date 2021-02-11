@@ -403,4 +403,98 @@ section#isutc-ensino .container .box img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
+
+section#noticias {
+  padding: 8rem 32rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+
+section#noticias h1 {
+  color: #364c90;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+section#noticias img {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section#noticias img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+section#noticias .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+section#noticias .container .noticia {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+section#noticias .container .noticia a h2, section#noticias .container .noticia a p {
+  color: #212529;
+  font-size: 2rem;
+}
+
+section#noticias .container .noticia > p {
+  margin-top: 1rem;
+  font-size: 1.45rem;
+  color: #888;
+  line-height: 2.5rem;
+}
+
+section#noticias .container .noticia img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section#noticias .container .right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 0 1rem 2rem 1rem;
+  gap: 1rem 2rem;
+  height: 620px;
+  overflow-y: scroll;
+}
+
+section#noticias .container .right .noticia {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 /*# sourceMappingURL=main.css.map */
