@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -193,6 +194,7 @@ header .right i {
 .nav-bar .dropdown.estudantes .column2 span,
 .nav-bar .dropdown.alumni div span {
   color: #00978b;
+  font-weight: bold;
 }
 
 .nav-bar .dropdown.instituicao .column2 a,
@@ -579,12 +581,121 @@ section#why-isutc > img {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 section#why-isutc > img:hover {
-  -webkit-transform: translateX(-50%) scale(1.2);
-          transform: translateX(-50%) scale(1.2);
+  -webkit-transform: translateX(-50%) scale(1.1);
+          transform: translateX(-50%) scale(1.1);
+}
+
+footer {
+  width: 100%;
+}
+
+footer .container {
+  width: 100%;
+}
+
+footer .site-map {
+  padding: 3rem 10rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+footer .site-map div {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  border-top: 1px solid gray;
+}
+
+footer .site-map div h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #8c8c8c;
+}
+
+footer .site-map div ul li a {
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 2rem;
+  color: #57666f;
+}
+
+footer .text {
+  padding: 3rem 10rem;
+  color: #8c8c8c;
+  font-size: 1.6rem;
+}
+
+footer .text a {
+  font-weight: 600;
+  color: #364c90;
+  text-transform: uppercase;
+}
+
+footer .page-info {
+  padding: 3rem 32rem;
+  width: 100%;
+  background-color: #364c90;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .page-info .copyright {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+footer .page-info .copyright a {
+  color: white;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+footer .page-info .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+footer .page-info .social-media i {
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.7rem;
+  color: #364c90;
+  background-color: white;
+  padding: .5rem;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=main.css.map */
